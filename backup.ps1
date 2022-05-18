@@ -54,7 +54,9 @@ function DifferentialBackup ($pathToBackup, $backupDestinationPath) {
 }
 
 function ShowNotification([string] $message) {
-    New-BurntToastNotification -FirstLine "Backup Tool" -SecondLine $message.Trim()
+    Write-Host "Backup Tool"
+    WriteHost $message.Trim()
+    #New-BurntToastNotification -FirstLine "Backup Tool" -SecondLine $message.Trim()
 }
 
 function GetConfigExclutionString() {
